@@ -1,0 +1,43 @@
+# Custom Prose Pattern Preset — Template
+#
+# Copy this file to create your own pattern set:
+#   cp custom.yaml.example my_patterns.yaml
+#
+# Then reference it in project.yaml:
+#   scanner:
+#     preset: "presets/patterns/my_patterns.yaml"
+#
+# Or use the --preset flag:
+#   python tools/prose_scanner.py --preset presets/patterns/my_patterns.yaml
+#
+# Each pattern needs:
+#   name:           Unique identifier (snake_case)
+#   regex:          Python regex pattern to match
+#   target_density: Maximum acceptable occurrences per 1,000 words
+#   weight:         How much this pattern affects the severity score (1.0-3.0)
+#   description:    Why this pattern matters (shown in reports)
+
+patterns:
+  - name: exclamation_marks
+    regex: "!"
+    target_density: 0.5
+    weight: 1.0
+    description: "Exclamation marks — let the prose convey excitement, not punctuation"
+
+  - name: very
+    regex: "\\bvery\\b"
+    target_density: 0.3
+    weight: 1.5
+    description: "Very — almost always replaceable with a stronger word"
+
+  - name: suddenly
+    regex: "\\b[Ss]uddenly\\b"
+    target_density: 0.1
+    weight: 2.0
+    description: "Suddenly — if it's sudden, the reader should feel it, not be told"
+
+  - name: adverb_said
+    regex: "\\bsaid\\s+\\w+ly\\b"
+    target_density: 0.2
+    weight: 1.5
+    description: "Adverb-said — 'said quietly' is weaker than showing the quiet"

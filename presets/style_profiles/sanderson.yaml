@@ -1,0 +1,22 @@
+# Style Profile: Brandon Sanderson
+#
+# Clean, efficient genre prose. Third-person limited with multiple POVs.
+# Focus on clarity over poetry. Strong dialogue and action.
+#
+# Use with the genre_fiction preset.
+
+notes:
+  voice: "Third person limited, rotating POV characters per chapter"
+  sentence_rhythm: "Medium-length, clear sentences. Shorter during action. Paragraph breaks for pacing."
+  signature_patterns: "Hard magic systems explained through character discovery, dramatic reveals"
+  dialogue: "Functional, character-voice differentiated by vocabulary and rhythm"
+  avoid: "Purple prose, extended metaphor, ambiguity in magic rules"
+  pov_rules: "Strict limited third — no head-hopping within scenes"
+
+scanner_overrides:
+  # Sanderson uses more filter words in limited third — it's the POV style
+  filter_words: { target_density: 0.8 }
+  # More similes are acceptable in genre fantasy
+  like_a_an: { target_density: 0.9 }
+  # Genre readers expect some hedging in mystery/suspense beats
+  hedging_verbs: { target_density: 0.25 }

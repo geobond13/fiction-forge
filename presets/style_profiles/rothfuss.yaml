@@ -1,0 +1,22 @@
+# Style Profile: Patrick Rothfuss
+#
+# Dense literary fantasy. Poetic, rhythmic prose with careful attention
+# to musicality. First-person retrospective narrator.
+#
+# Use with the literary_fiction preset.
+
+notes:
+  voice: "First person past tense, retrospective narrator looking back on youth"
+  sentence_rhythm: "Long flowing sentences punctuated by short declaratives for impact"
+  signature_patterns: "Threefold constructions, silence motifs, precise sensory detail"
+  dialogue: "Natural, often witty. Characters have distinct speech patterns."
+  avoid: "Modern idioms, contractions in narration (ok in dialogue), exclamation marks"
+  pov_rules: "Deep first-person — reader experiences what narrator experiences, no more"
+
+scanner_overrides:
+  # Rothfuss uses fewer em-dashes than typical literary fiction
+  em_dash: { target_density: 0.8 }
+  # His similes are deliberate and structural — fewer but more weighted
+  like_a_an: { target_density: 0.5 }
+  # Retrospective foreshadowing is a core technique — allow more
+  retrospective_foreshadow: { target_density: 0.2 }

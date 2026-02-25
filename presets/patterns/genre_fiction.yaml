@@ -1,0 +1,173 @@
+# Genre Fiction — Prose Pattern Preset
+#
+# Relaxed thresholds for genre work (fantasy, sci-fi, thriller, romance, etc.).
+# Density targets are ~30% higher than literary_fiction, reflecting the faster
+# pacing and different conventions of genre prose.
+#
+# Same 24 patterns — the detections are still useful, they just trigger at
+# higher densities to avoid over-flagging in genre-appropriate prose.
+
+patterns:
+  # --- Core prose patterns ---
+
+  - name: em_dash
+    regex: "\u2014"
+    target_density: 1.3
+    weight: 3.0
+    description: "Em-dashes — overuse creates choppy, self-conscious prose"
+
+  - name: like_a_an
+    regex: "\\blike\\s+(?:a|an)\\b"
+    target_density: 0.8
+    weight: 2.0
+    description: "Simile constructions — keep the strongest, cut the rest"
+
+  - name: as_if
+    regex: "\\bas\\s+(?:if|though)\\b"
+    target_density: 0.4
+    weight: 1.5
+    description: "As-if/as-though hedging — weakens immediacy"
+
+  - name: the_way
+    regex: "\\bthe\\s+way\\s+\\w+\\s+\\w+"
+    target_density: 0.5
+    weight: 1.5
+    description: "The-way constructions — often signals telling over showing"
+
+  - name: hedging_verbs
+    regex: "\\b(?:seemed?\\s+to|appeared?\\s+to|as\\s+if\\s+(?:he|she|it|they)\\s+might)\\b"
+    target_density: 0.2
+    weight: 1.0
+    description: "Hedging verbs — undercuts narrative authority"
+
+  - name: sentence_start_and
+    regex: "(?:^|\\n)\\s*And\\s+(?!so\\b)"
+    target_density: 0.7
+    weight: 0.5
+    description: "Sentences starting with And"
+
+  - name: sentence_start_but
+    regex: "(?:^|\\n)\\s*But\\s+"
+    target_density: 0.5
+    weight: 0.5
+    description: "Sentences starting with But"
+
+  # --- AI fingerprint patterns ---
+
+  - name: filter_words
+    regex: "\\bI\\s+(?:noticed|realized|felt|saw|heard|watched)\\b"
+    target_density: 0.7
+    weight: 1.5
+    description: "Filter words — narrator between reader and action"
+
+  - name: found_myself
+    regex: "\\b(?:found\\s+(?:myself|himself|herself|themselves|itself))\\b"
+    target_density: 0.2
+    weight: 2.0
+    description: "Found-myself construction — classic AI overuse"
+
+  - name: something_like
+    regex: "\\b(?:something\\s+(?:like|between|close\\s+to))\\b"
+    target_density: 0.2
+    weight: 2.0
+    description: "Something-like hedging"
+
+  - name: for_a_long_moment
+    regex: "\\bfor\\s+a\\s+(?:long|brief)\\s+moment\\b"
+    target_density: 0.15
+    weight: 2.0
+    description: "For-a-moment padding"
+
+  - name: or_perhaps
+    regex: "\\b[Oo]r\\s+perhaps\\b"
+    target_density: 0.15
+    weight: 1.5
+    description: "Or-perhaps equivocation"
+
+  - name: passive_emotion
+    regex: "\\bwas\\s+(?:filled|overcome|consumed|seized)\\s+(?:with|by)\\b"
+    target_density: 0.2
+    weight: 2.0
+    description: "Passive emotion — telling instead of showing"
+
+  - name: named_emotion_bare
+    regex: "\\bfelt\\s+(?:anger|grief|fear|sadness|joy|rage|sorrow|love|despair|shame|guilt|relief|pity)\\b"
+    target_density: 0.4
+    weight: 1.5
+    description: "Named emotion — show, don't label"
+
+  - name: emotional_softening
+    regex: "\\bbut\\s+there\\s+was\\s+no\\s+malice\\b|\\bbut\\s+(?:he|she|they|I)\\s+meant\\s+no\\b|\\bthough\\s+(?:he|she|they|I)\\s+didn'?t\\s+mean\\b"
+    target_density: 0.15
+    weight: 2.5
+    description: "Emotional softening — defusing reader tension"
+
+  # --- Voice drift patterns ---
+
+  - name: show_then_tell
+    regex: "(?:In that (?:gesture|moment|silence|word|look|single)|That was (?:the|what)|That's what|That'?s the thing|Meaning:|What I mean is|The point (?:was|is)|In other words)"
+    target_density: 0.15
+    weight: 2.5
+    description: "Show-then-tell"
+
+  - name: the_kind_of
+    regex: "\\bthe kind of \\w+ that\\b"
+    target_density: 0.2
+    weight: 1.5
+    description: "The-kind-of-X-that construction"
+
+  - name: the_particular
+    regex: "\\bthe particular \\w+"
+    target_density: 0.15
+    weight: 1.5
+    description: "The-particular — false precision"
+
+  - name: not_x_y_fragment
+    regex: "\\. Not [A-Za-z]+\\.\\s+(?:Not [A-Za-z]+\\.\\s+)*[A-Z]"
+    target_density: 0.3
+    weight: 1.0
+    description: "Not-X fragment chains"
+
+  - name: retrospective_foreshadow
+    regex: "\\byears later\\b|\\bmonths later I would\\b|\\bonly later would I\\b|\\bI didn't know then\\b|\\b[Ii]n hindsight\\b|\\blooking back\\b|\\bgotten ahead of myself\\b"
+    target_density: 0.15
+    weight: 2.0
+    description: "Retrospective foreshadowing"
+
+  - name: something_vague
+    regex: "\\b[Ss]omething (?:shifted|changed|stirred|broke|moved|passed between)\\b"
+    target_density: 0.08
+    weight: 2.0
+    description: "Vague something"
+
+  # --- Precision patterns ---
+
+  - name: not_x_not_y_but_z
+    regex: "\\.\\s+Not [A-Za-z]+\\.\\s+Not [A-Za-z]+\\.\\s+But "
+    target_density: 0.25
+    weight: 1.5
+    description: "Not-X, Not-Y, But-Z rhetorical pattern"
+
+  - name: something_complicated
+    regex: "\\b[Ss]omething complicated\\b"
+    target_density: 0.0
+    weight: 3.0
+    description: "Something complicated — never the right word"
+
+  - name: silence_was_not
+    regex: "\\b[Ss]ilence (?:was|were|seemed?) not (?:ordinary|normal|usual|natural|the kind)\\b"
+    target_density: 0.05
+    weight: 2.0
+    description: "Silence-was-not characterization"
+
+  - name: triple_simile_stack
+    regex: "(?:\\blike\\b[^.!?\\n]{0,80}\\blike\\b[^.!?\\n]{0,80}\\blike\\b)"
+    target_density: 0.0
+    weight: 3.0
+    description: "Triple simile stack"
+
+  - name: might_have_been
+    regex: "\\bmight have been\\b"
+    target_density: 0.15
+    weight: 1.0
+    description: "Might-have-been conditional past"

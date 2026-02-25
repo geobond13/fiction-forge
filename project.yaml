@@ -1,0 +1,56 @@
+# fiction-forge project configuration
+# All tools read from this single config file.
+
+project:
+  title: "My Novel"
+  subtitle: ""
+  author: "Author Name"
+  publisher: ""
+  year: 2026
+
+structure:
+  book_dir: "book"
+  reference_dir: "reference"
+  output_dir: "output"
+  templates_dir: "templates"
+  cover_image: ""                    # path to cover image (PNG/JPG)
+  illustrations_src: ""              # directory of chapter illustrations
+  front_matter:                      # filenames treated as front matter (no part divider)
+    - "00_Foreword.md"
+    - "00a_Prologue.md"
+  parts:
+    # chapter_number: { number: "Roman", name: "Part Name" }
+    1:  { number: "I",   name: "Part One" }
+    # 20: { number: "II",  name: "Part Two" }
+    # 40: { number: "III", name: "Part Three" }
+
+characters:
+  aliases:
+    # canonical_name: [alias1, alias2, ...]
+    # protagonist: ["protag", "the hero", "john"]
+    # sidekick: ["side", "jane"]
+
+reference_sources:
+  # key: relative path from project root
+  bible: "reference/bible.md"
+  characters: "reference/characters.md"
+  foreshadowing: "reference/foreshadowing.md"
+  continuity: "reference/continuity.md"
+  outline: "reference/outline.md"
+  # Add more as needed:
+  # magic_systems: "reference/magic_systems.md"
+  # worldbuilding: "reference/worldbuilding.md"
+
+scanner:
+  preset: "literary_fiction"          # preset name or path to custom YAML
+  severity:
+    critical: 12.0
+    high: 6.0
+    medium: 3.0
+
+images:
+  manifest: "chapter-images.json"
+  output_dir: "images"
+  style: "oil painting, dramatic lighting"
+  format: "webp"                      # webp or png
+  quality: 85

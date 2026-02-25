@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fiction-context": {
+      "command": "python",
+      "args": ["tools/fiction_mcp.py"]
+    }
+  }
+}
