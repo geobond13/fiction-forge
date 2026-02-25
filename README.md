@@ -1,8 +1,18 @@
 # fiction-forge
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
+[![MCP](https://img.shields.io/badge/MCP-Compatible-green.svg)](https://modelcontextprotocol.io)
+
 **AI-assisted novel writing toolkit** | A [Galleys.ai](https://galleys.ai) project
 
 Prose pattern scanner, MCP context server, multi-format publisher, and a battle-tested editorial workflow for novel-length manuscripts. Works with [Claude Code](https://claude.ai/claude-code).
+
+---
+
+AI-generated prose has fingerprints — em-dashes everywhere, show-then-tell constructions, hedging language, premature emotional resolution. At novel length, these patterns compound into something that reads unmistakably machine-generated. fiction-forge detects 24 of these patterns, gives your AI editor real-time access to your story bible, and provides measurable targets for editing. It was built to de-fingerprint a 286,000-word novel — and it worked.
+
+---
 
 ## What's Included
 
@@ -77,7 +87,7 @@ The core editorial process uses **parallel AI agents** coordinated by the prose 
 
 See [docs/workflow.md](docs/workflow.md) for the complete process.
 
-## Scanner Output
+### Scanner Output
 
 ```
 ================================================================================

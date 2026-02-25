@@ -32,3 +32,6 @@ desktop.ini
 
 # Claude Code
 .claude/
+
+# Distribution drafts
+reddit_posts.md
