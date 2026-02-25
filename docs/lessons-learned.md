@@ -1,6 +1,6 @@
 # Lessons Learned
 
-Practical insights from building and editing a 286,000-word novel across 111 chapters using AI-assisted parallel editing with Claude Code.
+Practical insights from building and editing [The Third Silence](https://thethirdsilence.com) — a 286,000-word, 111-chapter novel — using AI-assisted parallel editing with Claude Code. Part of the [Galleys.ai](https://galleys.ai) toolkit.
 
 ## The Big Picture
 

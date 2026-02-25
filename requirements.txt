@@ -1,5 +1,5 @@
 fastmcp>=0.1.0
 pyyaml>=6.0
-Pillow>=10.0
-openai>=1.0
-python-dotenv>=1.0
+Pillow>=10.0           # optional: illustration processing
+openai>=1.0            # optional: DALL-E image generation
+python-dotenv>=1.0     # optional: .env file loading

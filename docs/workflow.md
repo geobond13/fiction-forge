@@ -1,6 +1,6 @@
 # The Parallel-Agent Editorial Workflow
 
-This is the core process document. It describes how to use Claude Code with fiction-forge to write, edit, and polish a novel-length manuscript using parallel AI agents.
+This workflow was developed while creating [The Third Silence](https://thethirdsilence.com), a 286k-word novel edited across 5 complete passes with parallel Claude agents. It describes how to use Claude Code with fiction-forge to write, edit, and polish a novel-length manuscript using parallel AI agents.
 
 ## Overview
 

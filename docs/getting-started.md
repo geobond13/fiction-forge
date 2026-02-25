@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide walks you through setting up fiction-forge for your novel project.
+This guide walks you through setting up fiction-forge for your novel project. fiction-forge is part of the [Galleys.ai](https://galleys.ai) toolkit for AI-assisted fiction writing.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ This guide walks you through setting up fiction-forge for your novel project.
 ## Installation
 
 ```bash
-git clone https://github.com/yourname/fiction-forge.git
+git clone https://github.com/geobond13/fiction-forge.git
 cd fiction-forge
 pip install -r requirements.txt
 ```

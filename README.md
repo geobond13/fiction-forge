@@ -1,6 +1,8 @@
 # fiction-forge
 
-An open-source toolkit for AI-assisted novel writing with [Claude Code](https://claude.ai/claude-code). Prose pattern scanner, MCP context server, multi-format publisher, and a battle-tested editorial workflow for novel-length manuscripts.
+**AI-assisted novel writing toolkit** | A [Galleys.ai](https://galleys.ai) project
+
+Prose pattern scanner, MCP context server, multi-format publisher, and a battle-tested editorial workflow for novel-length manuscripts. Works with [Claude Code](https://claude.ai/claude-code).
 
 ## What's Included
 
@@ -20,12 +22,12 @@ An open-source toolkit for AI-assisted novel writing with [Claude Code](https://
 **Documentation**
 - Complete workflow guide for parallel-agent editorial passes
 - Prose pattern reference, MCP server deep dive, publishing guide
-- Lessons learned from a 286k-word, 111-chapter project
+- Lessons learned from a real 286k-word project
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourname/fiction-forge.git
+git clone https://github.com/geobond13/fiction-forge.git
 cd fiction-forge
 pip install -r requirements.txt
 ```
@@ -97,6 +99,17 @@ See [docs/workflow.md](docs/workflow.md) for the complete process.
   23    23_Aftermath.md                2,890    8.1 HIGH     show_then_tell=0.4/1k
 ```
 
+## Case Study: The Third Silence
+
+fiction-forge was developed and battle-tested on [The Third Silence](https://thethirdsilence.com), a 286,000-word, 111-chapter fan completion of Patrick Rothfuss's Kingkiller Chronicle.
+
+- 5 complete editorial passes using parallel Claude agents
+- 24 chapters expanded, 8 new chapters written with AI assistance
+- 60+ chapters modified across the editorial fix plan
+- Prose scanner identified and fixed 2,000+ pattern overuses
+
+Read the full process writeup at [thethirdsilence.com](https://thethirdsilence.com).
+
 ## Documentation
 
 - [Getting Started](docs/getting-started.md) — Setup and first steps
@@ -107,14 +120,6 @@ See [docs/workflow.md](docs/workflow.md) for the complete process.
 - [Publishing](docs/publishing.md) — Multi-format output
 - [Lessons Learned](docs/lessons-learned.md) — Practical insights from a real project
 
-## Built With
-
-Developed and battle-tested on a real novel project:
-- 286,000 words across 111 chapters
-- 5 complete editorial passes using parallel Claude agents
-- 24 chapters expanded, 8 new chapters written with AI assistance
-- 60+ chapters modified across the editorial fix plan
-
 ## Requirements
 
 - Python 3.11+
@@ -123,6 +128,14 @@ Developed and battle-tested on a real novel project:
 - [Claude Code](https://claude.ai/claude-code) (for AI-assisted editing)
 - OpenAI API key (for DALL-E image generation, optional)
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on submitting pattern presets, adding tools, and code style.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+A [Galleys.ai](https://galleys.ai) project | [The Third Silence](https://thethirdsilence.com)
