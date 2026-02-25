@@ -108,8 +108,6 @@ fiction-forge was developed and battle-tested on [The Third Silence](https://the
 - 60+ chapters modified across the editorial fix plan
 - Prose scanner identified and fixed 2,000+ pattern overuses
 
-Read the full process writeup at [thethirdsilence.com](https://thethirdsilence.com).
-
 ## Documentation
 
 - [Getting Started](docs/getting-started.md) — Setup and first steps
